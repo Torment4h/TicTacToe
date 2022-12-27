@@ -10,11 +10,11 @@ namespace TicTacToe
     {
         public void BoardPrinter (BoardMatrix board)
         {
-            Console.WriteLine($"  {board.GetScore(6)} | {board.GetScore(7)} | {board.GetScore(8)}  ");
+            Console.WriteLine($"  {board.GetPosition(6)} | {board.GetPosition(7)} | {board.GetPosition(8)}  ");
             Console.WriteLine($" ---+---+---  ");
-            Console.WriteLine($"  {board.GetScore(3)} | {board.GetScore(4)} | {board.GetScore(5)}  ");
+            Console.WriteLine($"  {board.GetPosition(3)} | {board.GetPosition(4)} | {board.GetPosition(5)}  ");
             Console.WriteLine($" ---+---+---  ");
-            Console.WriteLine($"  {board.GetScore(0)} | {board.GetScore(1)} | {board.GetScore(2)}  ");
+            Console.WriteLine($"  {board.GetPosition(0)} | {board.GetPosition(1)} | {board.GetPosition(2)}  ");
         }
     }
 }

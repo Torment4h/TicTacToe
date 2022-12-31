@@ -26,11 +26,5 @@ namespace TicTacToe
         {
             return player[position];
         }
-
-
-
-
-
-
     }
 }

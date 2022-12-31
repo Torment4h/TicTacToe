@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Board.cs" />
+    <Compile Include="Reader.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Printer.cs" />
     <Compile Include="Program.cs" />

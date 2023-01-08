@@ -9,6 +9,7 @@ namespace TicTacToe
     internal class Player
     {
         private int[] player = new int[5];
+        private int i = 0;
 
         //Constructor set everythign to U (Undefined) :>
         public Player() {
@@ -17,7 +18,6 @@ namespace TicTacToe
 
         public void SetValue(int value)
         {
-            int i=0;
             player[i] = value;
             i++;
         }

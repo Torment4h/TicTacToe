@@ -39,10 +39,29 @@ namespace TicTacToe
             return 1;
         }
 
-        public int InputReader(BoardMatrix board1, Program program)
+        public int InputReader(BoardMatrix board1, Program program, Printer board1Printer)
         {
-            Console.Clear();
-            Printer board1Printer = new Printer();//Print the board
+            Winner winner = new Winner();
+
+            if (program.i > 3 && winner.winChecker(player1))
+            {
+                Console.Clear();
+                board1Printer.BoardPrinter(board1);
+                Console.WriteLine("The player 1 won :>");
+                program.i = 9;
+                return 0;
+            }
+            else if (program.i > 3 && winner.winChecker(player2))
+            {
+                Console.Clear();
+                board1Printer.BoardPrinter(board1);
+                Console.WriteLine("The player 2 won :>");
+                program.i = 9;
+                return 0;
+            }
+
+
+            Console.Clear();          
                         
             UInt16 position = 0;                    //Read the keyboard input
             board1Printer.BoardPrinter(board1);     //Read the keyboard input
@@ -50,15 +69,15 @@ namespace TicTacToe
             string temp = Console.ReadLine();       //Read the keyboard input
             position =Convert.ToUInt16(temp);       //Read the keyboard input
 
-
             if (RangeOfNumber(position, program) == 0 || NumberChecker(position, player1, player2, program) == 0) return 0;
 
                 if (program.i % 2 == 0) //even number X player 1
                 {
-                    player1.SetValue(position);
+                player1.SetValue(position);
                     board1.SetPosition(position, options.X);
                     return 0;
                 }
+
                 else if (program.i % 2 == 1) // odd numbers O player 2
                 {
                     player2.SetValue(position);
